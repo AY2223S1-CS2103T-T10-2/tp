@@ -978,7 +978,7 @@ testers are expected to do more *exploratory* testing.
    4. Other incorrect inputs to try: Incorrect filepaths, filepaths for other file types (e.g. .doc)<br>
       Expected: new PDF file not assigned. Error details shown in the command display. See previous.
       
-   5. See `Opening PDF file` below for more related testing.
+   5. See [Opening PDF file](#opening-pdf-file) below for more related testing.
 
 ### Finding a person by name
 
@@ -1062,7 +1062,7 @@ testers are expected to do more *exploratory* testing.
 
    1. Perform step 1~4 in `Getting upcoming meetings` above.
    
-   2. Swtich back to the main FABook window.
+   2. Switch back to the main FABook window.
    
    3. Add one meeting to any client with meeting time within the next 7 days.
    
@@ -1070,7 +1070,6 @@ testers are expected to do more *exploratory* testing.
    
    3. Press `F2` or click on `Meetings` button then the `Upcoming Meetings F2` button that appears.<br>
       Expected: A `Upcoming Meetings` window appear. The meeting added in step 3 is displayed on the list.
-
 
 ### Update meetings:
 
@@ -1116,16 +1115,16 @@ testers are expected to do more *exploratory* testing.
 
    1. Prerequisites: Find certain persons using the `find` command. Multiple persons in the list.
 
-   1. Test case: `delete 1`<br>
+   2. Test case: `delete 1`<br>
       Expected: First contact is deleted from the list. Details of the deleted contact shown in the command display.
       
       1. Use the `list` command to show all persons.
          Expected: The same contact is deleted from the main list.
 
-   1. Test case: `delete 0`<br>
+   3. Test case: `delete 0`<br>
       Expected: No person is deleted. Error details shown in the command display.
 
-   1. Other incorrect delete commands to try: `delete`, `delete x`, `...` (where x is larger than the list size)<br>
+   4. Other incorrect delete commands to try: `delete`, `delete x`, `...` (where x is larger than the list size)<br>
       Expected: Similar to previous.
 
 ### Delete Meetings
@@ -1153,7 +1152,6 @@ testers are expected to do more *exploratory* testing.
    
    3. Enter `sync`.<br>
       Expected: Meetings added in step 2 are removed. Success message displayed shown in the command display.
-      
       
 ### Undoing a previous command
 
@@ -1186,7 +1184,7 @@ testers are expected to do more *exploratory* testing.
       
 4. Undoing list (non-undoable)
 
-   1. Prerequisite: No previous commands this session. Re-laund the app if there were previous inputs.
+   1. Prerequisite: No previous commands this session. Re-launch the app if there were previous inputs.
    
    2. Use `list` command to view entire list.
    
@@ -1273,13 +1271,14 @@ testers are expected to do more *exploratory* testing.
 
 **FABook** was built across 13 weeks, with the first 7 weeks being used to understand the foundation it was built upon,
 [**AddressBook Level-3**](https://nus-cs2103-ay2223s1.github.io/tp/), as well as conceptualize, design and plan out the
-implementation of **FABook**. The 6 remaining weeks were used to incrementally implement functionalities on a weekly basis.
+implementation of **FABook**. The 6 remaining weeks were used to incrementally implement functionalities on a milestone basis.
 
 ### Difficulty Level
 
-Given that each of us had to work on a similar individual project(iP) before banding together to work on this project, if the difficulty of the individual project is a 5,
+Given that each of us had to work on a similar individual project(iP) before banding together to work on this project, assuming the difficulty of the individual project is a 5,
 the difficulty of implementing **FABook** as an application is a 9. This is due to the following:
 * Given more freedom to explore and create an application based on our team's ideas, this encouraged us to push for more complex logic designs.
+* We were inheriting from a brownfield project and thus had to understand the logic of the code base that was given to us.
 * Working in a team environment meant that there was a need to discuss and delegate tasks on a regular basis, which led to administrative challenges.
 
 ### Challenges Faced
